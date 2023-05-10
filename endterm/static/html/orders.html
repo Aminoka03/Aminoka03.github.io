@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table {
+            width: 50%;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div style="display: flex; justify-content: center; margin-bottom: 20px">
+        <h2>Orders</h2>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>Product ID</th>
+                <th>User phone</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{range .}}
+            <tr>
+                <td>{{.Phone}}</td>
+                <td>{{.Product}}</td>
+            </tr>
+            {{end}}
+        </tbody>
+    </table>
+</body>
+</html>

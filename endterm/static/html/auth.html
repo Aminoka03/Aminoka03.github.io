@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Calibri, Helvetica, sans-serif;
+            background-color: pink;
+        }
+
+        .container {
+            width: 40%;
+            padding: 50px;
+            background-color: lightblue;
+        }
+
+        input[type=text], input[type=password], textarea {
+            width: 100%;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            display: inline-block;
+            border: none;
+            background: #f1f1f1;
+        }
+
+        input[type=text]:focus, input[type=password]:focus {
+            border: 1px solid black;
+            outline: none;
+        }
+
+        div {
+            padding: 10px 0;
+        }
+
+        hr {
+            border: 1px solid #f1f1f1;
+            margin-bottom: 25px;
+        }
+
+        .registerbtn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 16px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            opacity: 0.9;
+        }
+
+        .registerbtn:hover {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+
+        <form action="/auth" method="post">
+            <div style="display: flex; justify-content: center">
+            <div class="container">
+                <div style="text-align: center;"><h1>Authorization Form</h1></div>
+                <hr>
+                <label>
+                    Phone :
+                </label>
+                <input type="text" name="phone" placeholder="Phone"size="2"/>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+                <button type="submit" class="registerbtn">Authorize</button>
+            </div>
+            </div>
+        </form>
+
+</body>
+</html>

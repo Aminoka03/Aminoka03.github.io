@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>We.Dream</title>
+    <link rel="stylesheet" href="../css/services.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <header class="header">
+                <div class="contain">
+                    <div class="header_inner">
+                        <div class="header_logo">We.Dream</div>
+
+                        <nav class="nav">
+                            <a class="link_class" href="/">Home</a>
+                            <a class="link_class" href="/services">Services</a>
+                            <a class="link_class" href="/reg">Register</a>
+                            <a class="link_class" href="/auth">Auth</a>
+                        </nav>
+                    </div>
+                </div>
+            </header>
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <section class="section">
+                <div class="container">
+
+                    <div class="section_header">
+                        <h3 class="section_title">SERVICES</h3>
+                    </div>
+
+                    <div class="row">
+                        {{range .}}
+                            <div class="col-3">
+                                <h3>ID: {{.Id}}</h3>
+                                <h3>{{.Name}}</h3>
+                                <h4>Price: {{.Price}}</h4>
+                                <form action="/buy" method="post"><button value={{.Id}} name="id">Buy</button></form>
+                            </div>
+                        {{end}}
+                    </div>
+
+                </div>
+            </section>
+        </div>
+
+    </div>
+</div>
+
+
+
+</body>
+</html>
